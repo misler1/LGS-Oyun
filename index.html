@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LGS'ye Hazır mısın? 🎯</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="logo-fixed"><img src="logo.png" alt="Logo"></div>
+
+<div id="welcome" class="screen active">
+  <div class="page-logo"><img src="logo.png" alt="Logo"></div>
+  <div class="welcome-emoji">🎯</div>
+  <h1 class="welcome-title">LGS'ye Hazır mısın?</h1>
+  <p class="welcome-sub">12 eğlenceli mini görev, 12 altın tavsiye. Her birini tamamladıkça sınava bir adım daha yaklaşıyorsun!</p>
+  <div class="progress-overview" id="dot-bar"></div>
+  <button class="btn-start" onclick="startGame()">Hadi Başlayalım! 🚀</button>
+</div>
+
+<div id="game-screen" class="screen">
+  <div class="game-topbar">
+    <button class="topbar-back" onclick="goWelcome()">← Geri</button>
+    <div class="topbar-label" id="tb-label">Görev 1</div>
+    <div class="topbar-count" id="tb-count">1 / 12</div>
+  </div>
+  <div class="game-progress-bar"><div class="game-progress-fill" id="prog-fill"></div></div>
+  <div class="game-area" id="game-area"></div>
+</div>
+
+<div id="finish" class="screen">
+  <div class="page-logo"><img src="logo.png" alt="Logo"></div>
+  <div class="finish-emoji">🏆</div>
+  <h2 class="finish-title">Muhteşemsin!</h2>
+  <p class="finish-sub">12 görevi de tamamladın. İşte sana özel LGS rehberin — bunları aklında tut!</p>
+  <div class="tips-summary" id="tips-list"></div>
+  <div style="margin-bottom: 1.5rem;"></div>
+  <button class="btn-restart" onclick="restartGame()">🔄 Tekrar Oyna</button>
+</div>
+
+<script type="module" src="game.js"></script>
+</body>
+</html>
